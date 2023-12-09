@@ -1,0 +1,12 @@
+@use "./styles/reset";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Lato', sans-serif;
+  @apply max-w-[100vw] overflow-x-hidden min-h-screen;
+}
