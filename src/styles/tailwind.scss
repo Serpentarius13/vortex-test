@@ -1,0 +1,7 @@
+
+
+@layer components {
+  .container {
+    @apply lg:max-w-3xl max-w-[100vw] px-4 mx-auto w-full;
+  }
+}

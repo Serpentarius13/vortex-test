@@ -1,12 +1,8 @@
 <script lang="ts">
-  import MeetingsWidget from "$widgets/meeting/ui/MeetingsWidget.svelte";
-
-  let vara = 1;
-
-  vara++;
+  import { HomePage } from "$lib/pages/Home";
 </script>
 
-<MeetingsWidget />
+<HomePage />
 
 <style lang="scss">
 </style>

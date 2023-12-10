@@ -3,14 +3,14 @@
   import ErrorText from "$shared/ui/Error/ui/ErrorText.svelte";
 
   export let loading: boolean = false;
-  export let error: Error | null = null;
+  export let error: string | null = null;
 </script>
 
 {#if loading}
   <Loader />
 {:else if error}
   <ErrorText>
-    {error.message}
+    {error}
   </ErrorText>
 {:else}
   <slot />

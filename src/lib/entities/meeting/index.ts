@@ -1,6 +1,6 @@
 import { useMeetings } from "./model/api/meeting.api";
 import type { IMeeting } from "./lib/types/meeting.entity";
 import MeetingList from "./ui/MeetingList.svelte";
-import { sortMeetingsByDate } from "./lib/utils/sortMeetingsByDate";
+import MeetingModal from "./ui/MeetingModal.svelte";
 
-export { useMeetings, type IMeeting, MeetingList, sortMeetingsByDate };
+export { useMeetings, type IMeeting, MeetingList, MeetingModal };

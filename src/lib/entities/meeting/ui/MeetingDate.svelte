@@ -10,6 +10,8 @@
 
   export let dateStart: string;
   export let dateEnd: string;
+  export let isMonthYearRow: boolean = false;
+  export let durationClass: string = "";
 
   $: startDateData = splitMeetingDate(dateStart);
   $: endDateData = splitMeetingDate(dateEnd);
@@ -33,12 +35,12 @@
       {getMeetingDayText(startDateData.day, endDateData.day)}
     </span>
   </Badge>
-  <div>
-    <span class={`mb-0.5 text-sm block ${colors.text}`}>
+  <div class={`${isMonthYearRow && "!flex gap-2 items-center"}`}>
+    <span class={`mb-0.5  block text-xl font-bold ${colors.text}`}>
       {getMonthName(startDateData.month)}
     </span>
 
-    <span class="text-xs font-thin text-gray-500">
+    <span class={`text-xs font-thin text-gray-500 ${durationClass}`}>
       {startDateData.year}, {getMeetingDurationText(
         startDateData.date,
         endDateData.date,
